@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5053943A-2280-4D8A-9C80-A8B4B2BAE5F6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Negocio.Net</RootNamespace>
+    <AssemblyName>Negocio.net</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>AppIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Images.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v13.1.Core, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v13.1.Core, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>..\packages\Npgsql.2.2.5\lib\net45\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\packages\Npgsql.2.2.5\lib\net45\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql.EntityFramework">
+      <HintPath>..\packages\Npgsql.EntityFramework.2.2.5\lib\net45\Npgsql.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq.Dynamic">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.4\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Consultas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Consultas.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Edicao\FrmEdiEnderecos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edicao\FrmEdiEnderecos.Designer.cs">
+      <DependentUpon>FrmEdiEnderecos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edicao\FrmEdiLocais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edicao\FrmEdiLocais.Designer.cs">
+      <DependentUpon>FrmEdiLocais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edicao\FrmEdiMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edicao\FrmEdiMarcas.Designer.cs">
+      <DependentUpon>FrmEdiMarcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edicao\FrmEdiModelos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edicao\FrmEdiModelos.Designer.cs">
+      <DependentUpon>FrmEdiModelos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edicao\FrmEdiUnidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edicao\FrmEdiUnidades.Designer.cs">
+      <DependentUpon>FrmEdiUnidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integracao\Controles\GridListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Integracao\Controles\GridListControl.Designer.cs">
+      <DependentUpon>GridListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integracao\Classes\GridListEventHandler.cs" />
+    <Compile Include="Integracao\Classes\Validacao.cs" />
+    <Compile Include="Integracao\Classes\Campo.cs" />
+    <Compile Include="Integracao\Classes\Filtro.cs" />
+    <Compile Include="Integracao\Controles\FiltroControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Integracao\Controles\FiltroControl.Designer.cs">
+      <DependentUpon>FiltroControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integracao\FrmBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integracao\FrmBase.Designer.cs">
+      <DependentUpon>FrmBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integracao\FrmFiltros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integracao\FrmFiltros.Designer.cs">
+      <DependentUpon>FrmFiltros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integracao\Classes\Funcoes.cs" />
+    <Compile Include="Integracao\Classes\Modulos.cs" />
+    <Compile Include="Integracao\Classes\Parametros.cs" />
+    <Compile Include="Integracao\Classes\PopupMenuCloseHelper.cs" />
+    <Compile Include="Integracao\Classes\Seguranca.cs" />
+    <Compile Include="Integracao\Classes\Sistema.cs" />
+    <Compile Include="Integracao\FrmBaseEdicao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integracao\FrmBaseEdicao.Designer.cs">
+      <DependentUpon>FrmBaseEdicao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integracao\FrmBaseMovimentacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integracao\FrmBaseMovimentacao.Designer.cs">
+      <DependentUpon>FrmBaseMovimentacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integracao\FrmInicializacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integracao\FrmInicializacao.Designer.cs">
+      <DependentUpon>FrmInicializacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integracao\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integracao\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integracao\FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integracao\FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integracao\FrmRecursosVisuais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integracao\FrmRecursosVisuais.Designer.cs">
+      <DependentUpon>FrmRecursosVisuais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integracao\TratarExcessao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integracao\TratarExcessao.Designer.cs">
+      <DependentUpon>TratarExcessao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integracao\Classes\Validador.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Visualizacao\FrmMovEnderecos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visualizacao\FrmMovEnderecos.Designer.cs">
+      <DependentUpon>FrmMovEnderecos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visualizacao\FrmMovLocais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visualizacao\FrmMovLocais.Designer.cs">
+      <DependentUpon>FrmMovLocais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visualizacao\FrmMovMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visualizacao\FrmMovMarcas.Designer.cs">
+      <DependentUpon>FrmMovMarcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visualizacao\FrmMovModelos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visualizacao\FrmMovModelos.Designer.cs">
+      <DependentUpon>FrmMovModelos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visualizacao\FrmMovUnidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visualizacao\FrmMovUnidades.Designer.cs">
+      <DependentUpon>FrmMovUnidades.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Consultas.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Consultas.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edicao\FrmEdiEnderecos.resx">
+      <DependentUpon>FrmEdiEnderecos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edicao\FrmEdiLocais.resx">
+      <DependentUpon>FrmEdiLocais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edicao\FrmEdiMarcas.resx">
+      <DependentUpon>FrmEdiMarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edicao\FrmEdiModelos.resx">
+      <DependentUpon>FrmEdiModelos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edicao\FrmEdiUnidades.resx">
+      <DependentUpon>FrmEdiUnidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integracao\Controles\FiltroControl.resx">
+      <DependentUpon>FiltroControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integracao\FrmBase.resx">
+      <DependentUpon>FrmBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integracao\FrmFiltros.resx">
+      <DependentUpon>FrmFiltros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integracao\FrmBaseEdicao.resx">
+      <DependentUpon>FrmBaseEdicao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integracao\FrmBaseMovimentacao.resx">
+      <DependentUpon>FrmBaseMovimentacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integracao\FrmInicializacao.resx">
+      <DependentUpon>FrmInicializacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integracao\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integracao\FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integracao\FrmRecursosVisuais.resx">
+      <DependentUpon>FrmRecursosVisuais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integracao\Controles\GridListControl.resx">
+      <DependentUpon>GridListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integracao\TratarExcessao.resx">
+      <DependentUpon>TratarExcessao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visualizacao\FrmMovLocais.resx">
+      <DependentUpon>FrmMovLocais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visualizacao\FrmMovMarcas.resx">
+      <DependentUpon>FrmMovMarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visualizacao\FrmMovModelos.resx">
+      <DependentUpon>FrmMovModelos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visualizacao\FrmMovUnidades.resx">
+      <DependentUpon>FrmMovUnidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="AppIcon.ico" />
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dominio\Negocio.Net.Dominio.csproj">
+      <Project>{a5cdee6f-acc7-4bf8-a486-9850e1fbe602}</Project>
+      <Name>Negocio.Net.Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
